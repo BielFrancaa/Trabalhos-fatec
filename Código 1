@@ -1,0 +1,19 @@
+Código 1 
+
+public class SomaNaturais {
+    
+    public static int somaNaturais(int n) {
+        if (n < 0) {
+            return 0;
+        }
+        if (n == 0) {
+            return 0;
+        }
+        return n + somaNaturais(n - 1);
+    }
+    
+    public static void main(String[] args) {
+        int n = 5;
+        System.out.println("Soma dos " + n + " primeiros números naturais: " + somaNaturais(n));
+    }
+}
