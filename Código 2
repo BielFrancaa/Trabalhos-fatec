@@ -1,0 +1,15 @@
+public class MenorValorVetor {
+    
+    public static int menorValor(int[] vetor, int tamanho) {
+        if (tamanho == 1) {
+            return vetor[0];
+        }
+        int menor = menorValor(vetor, tamanho - 1);
+        return Math.min(menor, vetor[tamanho - 1]);
+    }
+    
+    public static void main(String[] args) {
+        int[] vetor = {3, 1, 4, 1, 5, 9, -2};
+        System.out.println("Menor valor no vetor: " + menorValor(vetor, vetor.length));
+    }
+}
